@@ -17,18 +17,36 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 ## Usage
 
 ``` javascript
-var foo = require( 'validate.io-integer-array' );
+var isIntegerArray = require( 'validate.io-integer-array' );
 ```
 
-#### foo( value )
+#### isIntegerArray( value )
 
-What does this function do?
+Validates if a `value` is an `integer array`.
+
+``` javascript
+var arr = [ 1, 2, 3 ];
+
+var bool = isIntegerArray( value );
+// returns true
+```
+
+__Note__: the method will return `false` for an empty `array`.
 
 
 ## Examples
 
 ``` javascript
-var foo = require( 'validate.io-integer-array' );
+var isIntegerArray = require( 'validate.io-integer-array' );
+
+console.log( isIntegerArray( [1,5,3] ) );
+// returns true
+
+console.log( isIntegerArray( [] ) );
+// returns false
+
+console.log( isIntegerArray( ['1','2','3'] ) );
+// returns false
 ```
 
 To run the example code from the top-level application directory,
